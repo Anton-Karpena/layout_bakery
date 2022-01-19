@@ -1,0 +1,21 @@
+.products {
+  &__header {
+    grid-column: 1 / 9;
+    margin: 178px 0 24px;
+    @extend %desktop__h2;
+  }
+
+  &__description {
+    grid-column: 1 / 9;
+    margin-bottom: 80px;
+    @extend %body__text;
+  }
+
+  &__card--1 {
+    grid-column: 1 / 4;
+  }
+
+  &__card--2 {
+    grid-column: 4 / 7;
+  }
+}

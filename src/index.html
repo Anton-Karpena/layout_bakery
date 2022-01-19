@@ -4,10 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.scss">
-    <title>FE Template</title>
+    <title>Creative Bakery</title>
   </head>
   <body>
-    FE Template
+    <header class="header">
+      <nav class="nav">
+        <a class="nav__logo" href="#">
+          <img src="./images/pictures/Bakerlab.svg" alt="Bakerlab logo">
+        </a>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Products</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">About Us</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Blog</a>
+          </li>
+          <li class="nav__item nav__item--call">
+            <img
+              class="nav__item--call-image"
+              src="./images/icons/Phone.svg"
+              alt="phone"
+            >
+            <a href="#" class="nav__link nav__link--call">Contact us</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="wrapper wrapper--header">
+        <p class="header__description">
+          We bake your fantasies — croissants, cakes, cookies, and cupcakes.
+        </p>
+        <h1 class="header__main">
+          Creative bakery
+        </h1>
+        <a href="#" class="button">
+          <img
+            class="button__image"
+            src="./images/icons/Cookie.svg" 
+            alt="cookie"
+          >
+          <p class="button__text">Learn more</p>
+        </a>
+      </div>
+    </header>
+    <main class="main">
+      <section class="products">
+        <div class="wrapper wrapper--products">
+          <h2 class="products__header">What we bake</h2>
+          <p class="products__description">
+            We can customize our cookies right for your needs. Just imagine it
+          </p>
+          <div class="products__card products__card--1">
+            <img src="./images/pictures/Product__1.png" alt="Oatmeal cookies">
+            <p class="products__card-name">Cakes</p>
+            <p class="products__card-text">
+              Oatmeal cookies with golden raisins, orange zest and chocolate chips
+            </p>
+            <div class="products__button">
+              <img src="./images/icons/Arrow.svg" alt="Arrow">
+              <a href="#">Order</a>
+            </div>
+          </div>
+          <div class="products__card products__card--2">
+            <img src="./images/pictures/Product__2.png" alt="Oatmeal cookies">
+            <p class="products__card-name">Cakes</p>
+            <p class="products__card-text">
+              Oatmeal cookies with golden raisins, orange zest and chocolate chips
+            </p>
+            <div class="products__button">
+              <img src="./images/icons/Arrow.svg" alt="Arrow">
+              <a href="#">Order</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about"></section>
+    </main>
+    <footer class="footer"></footer>
     <script
       defer
       type="module"

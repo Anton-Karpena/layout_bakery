@@ -1,0 +1,36 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      padding-left: 64px;
+    }
+
+    &--call {
+      display: flex;
+      align-items: center;
+
+      &-image {
+        padding: 6px;
+      }
+    }
+  }
+
+  &__link {
+    color: $color-black;
+    @extend %body__text;
+
+    &--call {
+      color: $color-orange;
+      @extend %uppercase;
+    }
+  }
+}

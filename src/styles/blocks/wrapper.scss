@@ -1,0 +1,12 @@
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+
+  &--header {
+    background-image: url("./images/pictures/Cookie.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
