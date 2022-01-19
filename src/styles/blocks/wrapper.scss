@@ -5,10 +5,8 @@
   grid-template-columns: repeat(8, 1fr);
   column-gap: 24px;
 
-  &--header {
-    background-image: url("./images/pictures/Cookie.png");
-    background-repeat: no-repeat;
-    background-position: center;
+  @include onTablet {
+    max-width: 640px;
   }
 
   &--footer {

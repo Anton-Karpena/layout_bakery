@@ -10,6 +10,10 @@
     grid-column: 5 / 9;
     margin-bottom: 40px;
     color: $color-white;
+
+    @include onTablet {
+      @include tablet__h2;
+    }
   }
 
   &__actions {
@@ -27,10 +31,18 @@
 
     &--call {
       grid-column: 5 / 7;
+
+      @include onTablet {
+        grid-column: 5 / 9;
+      }
     }
 
     &--email {
       grid-column: 7 / 9;
+
+      @include onTablet {
+        grid-column: 5 / 9;
+      }
     }
 
     &-item:not(:last-child) {

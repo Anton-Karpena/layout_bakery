@@ -3,6 +3,11 @@
     grid-column: 1 / 9;
     margin: 178px 0 24px;
     @extend %desktop__h2;
+
+    @include onTablet {
+      margin: 248px 0 24px;
+      @include tablet__h2;
+    }
   }
 
   &__description {
@@ -14,6 +19,12 @@
   &__card {
     &-image {
       margin-bottom: 16px;
+      max-height: 560px;
+
+      @include onTablet {
+        max-height: 400px;
+        border-radius: 10px;
+      }
     }
 
     &-name {
@@ -46,25 +57,49 @@
 
   &__card--1 {
     grid-column: 1 / 4;
+
+    @include onTablet {
+      grid-column: 1 / 5;
+    }
   }
 
   &__card--2 {
     grid-column: 4 / 7;
+
+    @include onTablet {
+      grid-column: 5 / 9;
+    }
   }
 
   &__card--3 {
     grid-column: 3 / 6;
+
+    @include onTablet {
+      grid-column: 1 / 5;
+    }
   }
 
   &__card--4 {
     grid-column: 6 / 9;
+
+    @include onTablet {
+      grid-column: 5 / 9;
+    }
   }
 
   &__card--5 {
     grid-column: 1 / 4;
+
+    @include onTablet {
+      grid-column: 1 / 5;
+    }
   }
 
   &__card--6 {
     grid-column: 4 / 7;
+
+    @include onTablet {
+      grid-column: 5 / 9;
+    }
   }
 }
