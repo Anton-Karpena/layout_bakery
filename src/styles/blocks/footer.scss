@@ -1,0 +1,71 @@
+.footer {
+  background-color: $color-black;
+
+  &__logo {
+    grid-column: 1 / 5;
+  }
+
+  &__header {
+    @extend %desktop__h2;
+    grid-column: 5 / 9;
+    margin-bottom: 40px;
+    color: $color-white;
+  }
+
+  &__actions {
+    grid-column: 1 / 9;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  &__list {
+    &--menu {
+      grid-column: 1 / 3;
+    }
+
+    &--call {
+      grid-column: 5 / 7;
+    }
+
+    &--email {
+      grid-column: 7 / 9;
+    }
+
+    &-item:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &-header {
+      @extend %uppercase;
+      color: $color-grey;
+    }
+
+    &-link {
+      @extend %body__text;
+      color: $color-white;
+    }
+  }
+
+  &__bottom {
+    grid-column: 1 / 9;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: 24px;
+
+    &-socials {
+      grid-column: 1 / 5;
+    }
+
+    &-link:not(:last-child) {
+      margin-right: 32px;
+    }
+
+    &-copyright {
+      @extend %body__text;
+      grid-column: 5 / 9;
+      color: $color-grey;
+    }
+  }
+}

@@ -1,12 +1,17 @@
 .wrapper {
-  max-width: 1200px;
+  max-width: 1192px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
+  column-gap: 24px;
 
   &--header {
     background-image: url("./images/pictures/Cookie.png");
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  &--footer {
+    padding: 88px 0;
   }
 }
