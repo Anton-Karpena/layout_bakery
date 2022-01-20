@@ -1,10 +1,15 @@
 .button {
   display: flex;
   justify-content: center;
+  align-items: center;
   border: 2px solid $color-orange;
   border-radius: 32px;
   grid-column: 1 / 3;
   margin-bottom: 112px;
+
+  &:focus {
+    border: 2px solid $color-dark-orange;
+  }
 
   @include onTablet {
     margin-bottom: 0;
@@ -19,6 +24,12 @@
     color: $color-orange;
     padding: 20px 0 20px 6px;
     @extend %uppercase;
+    transition: color $transition-time;
+  }
+
+  &__image {
+    fill: $color-orange;
+    transition: fill $transition-time;
   }
 
   &:hover {
@@ -29,7 +40,19 @@
     }
 
     .button__image {
-      filter: invert(90%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+      fill: $color-white;
+    }
+  }
+
+  &:focus {
+    background-color: $color-dark-orange;
+
+    .button__text {
+      color: $color-white;
+    }
+
+    .button__image {
+      fill: $color-white;
     }
   }
 }

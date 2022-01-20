@@ -124,11 +124,22 @@
       }
     }
 
-    &-link:not(:last-child) {
-      margin-right: 32px;
+    &-link {
 
-      @include onMobile {
-        margin-right: 36px;
+      &-icon {
+        fill: $color-orange;
+
+        &:hover {
+          fill: $color-white;
+        }
+      }
+          
+      &:not(:last-child) {
+        margin-right: 32px;
+  
+        @include onMobile {
+          margin-right: 36px;
+        }
       }
     }
 
