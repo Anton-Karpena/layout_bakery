@@ -1,4 +1,5 @@
 .header {
+
   &__description {
     @extend %body__text;
     margin: 136px 0 8px;
@@ -14,7 +15,6 @@
   &__main {
     margin-bottom: 64px;
     grid-column: 1 / 9;
-    position: relative;
 
     &-header {
       @extend %desktop__h1;
@@ -25,18 +25,30 @@
         margin-bottom: 200px;
       }
     }
+  }
 
-    &-cookie {
-      z-index: -1;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      transform: translate(50%, -40%);
+  &__cookie {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    -webkit-animation: spin 10s linear infinite;
+    -moz-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
 
-      @include onTablet {
-        height: 328px;
-      }
+    @include onTablet {
+      height: 328px;
+      top: 25%;
     }
+  }
+
+  @-webkit-keyframes spin {
+    100% {-webkit-transform: rotate(360deg);}
+  }
+  @-moz-keyframes spin {
+    100% {-webkit-transform: rotate(360deg);}
+  }
+  @keyframes spin {
+    100% {-webkit-transform: rotate(360deg);}
   }
 }
