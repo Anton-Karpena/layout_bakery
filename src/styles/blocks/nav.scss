@@ -12,8 +12,19 @@
   }
 
   &__item {
+    transition: transform $transition-time;
+
     &:not(:first-child) {
       padding-left: 64px;
+    }
+
+    &:hover {
+      transform: translateY(-15%);
+      cursor: pointer;
+      
+      .nav__link {
+        color: $color-orange;
+      }
     }
 
     &--call {
@@ -22,6 +33,11 @@
 
       &-image {
         padding: 6px;
+      }
+
+      &:hover {
+        transform: translateX(-5%);
+        cursor: pointer;
       }
     }
   }
