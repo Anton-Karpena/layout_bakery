@@ -5,8 +5,13 @@
     @extend %desktop__h2;
 
     @include onTablet {
-      margin: 248px 0 24px;
       @include tablet__h2;
+      margin: 248px 0 24px;
+    }
+
+    @include onMobile {
+      @include mobile__h2;
+      margin: 104px 0 24px;
     }
   }
 
@@ -14,12 +19,22 @@
     grid-column: 1 / 9;
     margin-bottom: 80px;
     @extend %body__text;
+
+    @include onMobile {
+      margin-bottom: 56px;
+    }
   }
 
   &__card {
     &-image {
       margin-bottom: 16px;
       max-height: 560px;
+      transition: transform $transition-time;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.08);
+      }
 
       @include onTablet {
         max-height: 400px;
@@ -44,6 +59,16 @@
       display: flex;
       align-items: center;
       margin-bottom: 88px;
+      transition: transform $transition-time;
+
+      &:hover {
+        transform: translateX(5%);
+        cursor: pointer;
+      }
+
+      @include onMobile {
+        margin-bottom: 56px;
+      }
 
       &-text {
         color: $color-orange;
@@ -61,6 +86,10 @@
     @include onTablet {
       grid-column: 1 / 5;
     }
+
+    @include onMobile {
+      grid-column: 1 / 9;
+    }
   }
 
   &__card--2 {
@@ -68,6 +97,10 @@
 
     @include onTablet {
       grid-column: 5 / 9;
+    }
+
+    @include onMobile {
+      grid-column: 1 / 9;
     }
   }
 
@@ -77,6 +110,10 @@
     @include onTablet {
       grid-column: 1 / 5;
     }
+
+    @include onMobile {
+      grid-column: 1 / 9;
+    }
   }
 
   &__card--4 {
@@ -84,6 +121,10 @@
 
     @include onTablet {
       grid-column: 5 / 9;
+    }
+
+    @include onMobile {
+      grid-column: 1 / 9;
     }
   }
 
@@ -93,6 +134,10 @@
     @include onTablet {
       grid-column: 1 / 5;
     }
+
+    @include onMobile {
+      grid-column: 1 / 9;
+    }
   }
 
   &__card--6 {
@@ -100,6 +145,10 @@
 
     @include onTablet {
       grid-column: 5 / 9;
+    }
+
+    @include onMobile {
+      grid-column: 1 / 9;
     }
   }
 }

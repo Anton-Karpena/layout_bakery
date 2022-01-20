@@ -10,6 +10,12 @@
       grid-column: 1 / 5;
       margin: 80px 0 146px;
     }
+
+    @include onMobile {
+      grid-column: 1 / 9;
+      margin: 32px 0;
+      text-align: center;
+    }
   }
 
   &__main {
@@ -23,6 +29,12 @@
       @include onTablet {
         @include tablet__h1;
         margin-bottom: 200px;
+      }
+
+      @include onMobile {
+        @include mobile__h1;
+        margin-bottom: 280px;
+        text-align: center;
       }
     }
   }
@@ -39,6 +51,11 @@
     @include onTablet {
       height: 328px;
       top: 25%;
+    }
+
+    @include onMobile {
+      top: 36%;
+      left: 0;
     }
   }
 

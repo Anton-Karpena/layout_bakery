@@ -8,6 +8,7 @@
     margin-top: 72px;
   }
 
+
   &__header {
     @extend %desktop__h2;
     grid-column: 1 / 5;
@@ -16,11 +17,22 @@
     @include onTablet {
       @include tablet__h2;
     }
+
+    @include onMobile {
+      @include mobile__h2;
+      grid-column: 1 / 9;
+      margin-bottom: 32px;
+    }
   }
 
   &__text {
     @extend %body__text;
     grid-column: 5 / 9;
+
+    @include onMobile {
+      grid-column: 1 / 9;
+      margin-bottom: 64px;
+    }
   }
 
   &__statistics {
@@ -32,6 +44,10 @@
 
     @include onTablet {
       margin-bottom: 152px;
+    }
+
+    @include onMobile {
+      margin-bottom: 0;
     }
 
     &-top {
@@ -55,6 +71,10 @@
       @include onTablet {
         grid-column: 1 / 5;
       }
+
+      @include onMobile {
+        grid-column: 1 / 9;
+      }
     }
 
     &-stores {
@@ -62,6 +82,10 @@
 
       @include onTablet {
         grid-column: 5 / 9;
+      }
+
+      @include onMobile {
+        grid-column: 1 / 9;
       }
     }
 
@@ -71,6 +95,10 @@
       @include onTablet {
         grid-column: 1 / 5;
       }
+
+      @include onMobile {
+        grid-column: 1 / 9;
+      }
     }
 
     &-clients {
@@ -78,6 +106,10 @@
 
       @include onTablet {
         grid-column: 5 / 9;
+      }
+
+      @include onMobile {
+        grid-column: 1 / 9;
       }
     }
   }

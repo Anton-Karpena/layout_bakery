@@ -8,8 +8,11 @@
 
   @include onTablet {
     margin-bottom: 0;
-
     grid-column: 3 / 7;
+  }
+
+  @include onMobile {
+    grid-column: 1 / 9;
   }
 
   &__text {
