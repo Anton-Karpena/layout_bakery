@@ -56,13 +56,13 @@
 
     &-button {
       @extend %uppercase;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       margin-bottom: 88px;
       transition: transform $transition-time;
 
       &:hover {
-        transform: translateX(5%);
+        transform: translateX(10%);
         cursor: pointer;
       }
 
